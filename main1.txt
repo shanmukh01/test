@@ -1,1 +1,50 @@
-main branch
+Continuous Integration (CI) is a development practice in which the developers are needs to commit changes to the source
+code in a shared repository at regular intervals. Every commit made in the repository is then built. This allows the
+development teams to detect the problems early.
+Continuous integration requires the developers to have regular builds. The general practice is that whenever a code
+commit occurs, a build should be triggered.
+Continuous Integration with Jenkins
+Let&#39;s consider a scenario where the complete source code of the application was built and then deployed on test server for
+testing. It sounds like a perfect way to develop software, but this process has many problems.
+o Developer teams have to wait till the complete software is developed for the test results.
+o There is a high prospect that the test results might show multiple bugs. It was tough for developers to locate
+those bugs because they have to check the entire source code of the application.
+o It slows the software delivery process.
+o Continuous feedback pertaining to things like architectural or coding issues, build failures, test status and file
+release uploads was missing due to which the quality of software can go down.
+o The whole process was manual which increases the threat of frequent failure.
+AD
+It is obvious from the above stated problems that not only the software delivery process became slow but the quality of
+software also went down. This leads to customer dissatisfaction.
+So to overcome such problem there was a need for a system to exist where developers can continuously trigger a build and
+test for every change made in the source code.
+This is what Continuous Integration (CI) is all about. Jenkins is the most mature Continuous Integration tool available so let
+us see how Continuous Integration with Jenkins overcame the above shortcomings.
+Let&#39;s see a generic flow diagram of Continuous Integration with Jenkins:
+AD
+
+Let&#39;s see how Jenkins works. The above diagram is representing the following functions:
+o First of all, a developer commits the code to the source code repository. Meanwhile, the Jenkins checks the
+repository at regular intervals for changes.
+o Soon after a commit occurs, the Jenkins server finds the changes that have occurred in the source code
+repository. Jenkins will draw those changes and will start preparing a new build.
+o If the build fails, then the concerned team will be notified.
+o If built is successful, then Jenkins server deploys the built in the test server.
+o After testing, Jenkins server generates a feedback and then notifies the developers about the build and test
+results.
+o It will continue to verify the source code repository for changes made in the source code and the whole process
+keeps on repeating.
+Why Use Jenkins Pipeline?
+Jenkins is a continuous integration server which has the ability to support the automation of software development
+processes. You can create several automation jobs with the help of use cases, and run them as a Jenkins pipeline.
+AD
+Here are the reasons why you should use Jenkins pipeline:
+o Jenkins pipeline is implemented as a code which allows several users to edit and execute the pipeline process.
+o Pipelines are robust. So if your server undergoes an unpredicted restart, the pipeline will be automatically
+resumed.
+o You can pause the pipeline process and make it wait to continue until there is an input from the user.
+o Jenkins Pipelines support big projects. You can run many jobs, and even use pipelines in a loop.
+Jenkins Pipeline Concepts
+
+Pipeline: This is the user-defined block, which contains all the processes such as build, test, deploy, etc. it is a group of all
+the stages in a JenkinsFile. All the stages and steps are defined in this block. It is used in declarative pipeline syntax.
